@@ -1,61 +1,26 @@
-void main(){
-  var pokemons = Pokemons();
-  
-  imprimeixPokemon(pokemons);
-  pokemons.seguent();
-  imprimeixPokemon(pokemons);
-  pokemons.anterior();
+class Pokemon{
+  final String nom;
+  final int numero;
 
-}
-
-
-void imprimeixPokemon(Pokemons p){
-  print(p.pokemonActual);
-  print(p.numActual);
-  print(p.urlImatge);
-  print("");
+  Pokemon(this.nom, this.numero);
 }
 
 class Pokemons {
-  List<String> llista = [
-    "bulbasaur",
-    "ivysaur",
-    "venusaur",
-    "charmander",
-    "charmeleon",
-    "charizard",
-    "squirtle",
-    "wartortle",
-    "blastoise",
-    "caterpie",
-    "metapod",
-    "butterfree",
-    "weedle",
-    "kakuna",
-    "beedrill",
-  ];
-  
-  int indexActual = 0;
-  
-
-  String get pokemonActual {
-    return llista[indexActual];  
-  }
-  int get numActual {
-    return indexActual + 1;
-  }
-  String get urlImatge {
-    return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/versions/generation-i/red-and-green/${indexActual+1}.png";
-  }
-  void seguent(){
-    if(indexActual<16){
-      indexActual++;
-    }
-  }
-  void anterior(){
-    if(indexActual>0){
-      indexActual--;
-    }
-  }
-    
+  List<Pokemon> llista = [
+    Pokemon("bulbasaur", 1),
+    Pokemon("ivysaur", 2),
+    Pokemon("venusaur", 3),
+    Pokemon("charmander", 4),
+    Pokemon("charmeleon", 5),
+    Pokemon("charizard", 6),
+    Pokemon("squirtle", 7),
+    Pokemon("wartortle", 8),
+    Pokemon("blastoise", 9),
+    Pokemon("caterpie", 10),
+    Pokemon("metapod", 11),
+    Pokemon("butterfree", 12),
+    Pokemon("weedle", 13),
+    Pokemon("kakuna", 14),
+    Pokemon("beedrill", 15),
+  ];    
 }

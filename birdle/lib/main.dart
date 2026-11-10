@@ -58,7 +58,7 @@ class Tile extends StatelessWidget {
 }
 
 class GamePage extends StatefulWidget {
-  GamePage({super.key});
+  const GamePage({super.key});
   @override
   State<GamePage> createState() => _GamePageState();
 }
@@ -94,7 +94,7 @@ class _GamePageState extends State<GamePage> {
 }
 
 class GuessInput extends StatefulWidget {
-  GuessInput({super.key, required this.onSubmitGuess});
+  const GuessInput({super.key, required this.onSubmitGuess});
 
   final void Function(String) onSubmitGuess;
 
