@@ -1,4 +1,4 @@
-class Pokemon{
+class Pokemon {
   final String nom;
   final int numero;
 
@@ -6,7 +6,7 @@ class Pokemon{
 }
 
 class Pokemons {
-  List<Pokemon> llista = [
+  final List<Pokemon> llista = [
     Pokemon("bulbasaur", 1),
     Pokemon("ivysaur", 2),
     Pokemon("venusaur", 3),
@@ -22,5 +22,5 @@ class Pokemons {
     Pokemon("weedle", 13),
     Pokemon("kakuna", 14),
     Pokemon("beedrill", 15),
-  ];    
+  ];
 }
