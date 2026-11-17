@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'pokemons_viewmodel.dart';
 
-class PokemonView extends StatelessWidget {
-  final viewModel = PokemonsViewModel();
+class Pokedex extends StatelessWidget {
+  final pokedexViewModel = PokemonsViewModel();
 
-  PokemonView({super.key});
+  Pokedex({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +16,9 @@ class PokemonView extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              PokemonCard(viewModel: viewModel),
+              PokeCard(viewModel: pokedexViewModel),
               const Spacer(),
-              PokemonPages(viewModel: viewModel),
+              PokePages(viewModel: pokedexViewModel),
             ],
           ),
         ),
@@ -27,10 +27,10 @@ class PokemonView extends StatelessWidget {
   }
 }
 
-class PokemonCard extends StatelessWidget {
+class PokeCard extends StatelessWidget {
   final PokemonsViewModel viewModel;
 
-  const PokemonCard({required this.viewModel, super.key});
+  const PokeCard({super.key, required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +43,18 @@ class PokemonCard extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                Text(
-                  viewModel.nomPokemon,
-                  style: Theme.of(context).textTheme.titleLarge,
+                SizedBox(
+                  width: 300,
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      viewModel.nomTipus.toUpperCase(),
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                  ),
                 ),
                 Text(
-                  viewModel.nomTipus,
+                  viewModel.nomPokemon,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Image.network(viewModel.urlImatge, width: 300, height: 300),
@@ -61,10 +67,10 @@ class PokemonCard extends StatelessWidget {
   }
 }
 
-class PokemonPages extends StatelessWidget {
+class PokePages extends StatelessWidget {
   final PokemonsViewModel viewModel;
 
-  const PokemonPages({required this.viewModel, super.key});
+  const PokePages({super.key, required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
