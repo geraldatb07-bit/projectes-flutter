@@ -38,13 +38,17 @@ class PokemonCard extends StatelessWidget {
       listenable: viewModel,
       builder: (context, child) {
         return Card(
-          color: Colors.lightGreen,
+          color: viewModel.colorTipus,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
                 Text(
                   viewModel.nomPokemon,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text(
+                  viewModel.nomTipus,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Image.network(viewModel.urlImatge, width: 300, height: 300),

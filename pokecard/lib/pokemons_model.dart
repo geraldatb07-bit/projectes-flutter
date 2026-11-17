@@ -4,7 +4,6 @@ class Pokemon {
 
   Pokemon(this.nom, this.numero);
 }
-
 class Pokemons {
   final List<Pokemon> llista = [
     Pokemon("bulbasaur", 1),
