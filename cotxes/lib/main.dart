@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pokemons_view.dart';
+
+import 'cotxes_view.dart';
 
 void main() => runApp(MaterialApp(home: Pokedex()));

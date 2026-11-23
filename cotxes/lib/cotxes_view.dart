@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'cotxes_viewmodel.dart';
 
-import 'pokemons_viewmodel.dart';
+class CotxesView extends StatelessWidget {
+  final cotxesViewModel = CotxesViewModel();
 
-class Pokedex extends StatelessWidget {
-  final pokedexViewModel = PokemonsViewModel();
-
-  Pokedex({super.key});
+  CotxesView({super.key});
 
   @override
   Widget build(BuildContext context) {
