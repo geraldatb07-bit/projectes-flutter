@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'cotxes_viewmodel.dart';
 
 class CotxesView extends StatelessWidget {
-  final cotxesViewModel = CotxesViewModel();
+  final carViewModel = CotxesViewModel();
 
   CotxesView({super.key});
 
@@ -14,11 +15,7 @@ class CotxesView extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: [
-              PokeCard(viewModel: pokedexViewModel),
-              const Spacer(),
-              PokePages(viewModel: pokedexViewModel),
-            ],
+            children: [Expanded(child: CarPages(viewModel: carViewModel))],
           ),
         ),
       ),
@@ -26,10 +23,10 @@ class CotxesView extends StatelessWidget {
   }
 }
 
-class PokeCard extends StatelessWidget {
-  final PokemonsViewModel viewModel;
+class CarCard extends StatelessWidget {
+  final CotxesViewModel viewModel;
 
-  const PokeCard({super.key, required this.viewModel});
+  const CarCard({super.key, required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
@@ -37,27 +34,55 @@ class PokeCard extends StatelessWidget {
       listenable: viewModel,
       builder: (context, child) {
         return Card(
-          color: viewModel.colorTipus,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: 300,
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      viewModel.nomTipus.toUpperCase(),
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
+            child: SizedBox(
+              width: 600,
+              height: 400,
+              child: Column(
+                children: [
+                  Text(
+                    viewModel.marcaCotxe.toUpperCase(),
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
-                ),
-                Text(
-                  viewModel.nomPokemon,
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
-                Image.network(viewModel.urlImatge, width: 300, height: 300),
-              ],
+                  Text(viewModel.modelCotxe),
+                  Image.network(viewModel.urlImatge, width: 400, height: 350),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Cavalls:'),
+                            Text('${viewModel.cavallsCotxe}'),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Producció:'),
+                            Text(
+                              '${viewModel.iniciProduccioCotxe} - '
+                              '${viewModel.fiProduccioCotxe ?? 'Actualitat'}',
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Tracció:'),
+                            Text(viewModel.traccioCotxe),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         );
@@ -66,35 +91,38 @@ class PokeCard extends StatelessWidget {
   }
 }
 
-class PokePages extends StatelessWidget {
-  final PokemonsViewModel viewModel;
+class CarPages extends StatelessWidget {
+  final CotxesViewModel viewModel;
 
-  const PokePages({super.key, required this.viewModel});
+  const CarPages({super.key, required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ElevatedButton(
-              onPressed: viewModel.anterior,
-              child: const Icon(Icons.arrow_left),
-            ),
-            ListenableBuilder(
-              listenable: viewModel,
-              builder: (context, child) =>
-                  Text('${viewModel.numeroPokemonActual}'),
-            ),
-            ElevatedButton(
-              onPressed: viewModel.seguent,
-              child: const Icon(Icons.arrow_right),
-            ),
-          ],
+    return Row(
+      children: [
+        IconButton(
+          onPressed: viewModel.anterior,
+          icon: const Icon(Icons.arrow_left),
         ),
-      ),
+        Expanded(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CarCard(viewModel: viewModel),
+              const SizedBox(height: 8),
+              ListenableBuilder(
+                listenable: viewModel,
+                builder: (context, child) => Text('${viewModel.indexActual}'),
+              ),
+            ],
+          ),
+        ),
+        IconButton(
+          onPressed: viewModel.seguent,
+          icon: const Icon(Icons.arrow_right),
+        ),
+      ],
     );
+    
   }
 }

@@ -1,6 +1,6 @@
 var cotxes = <Map<String, dynamic>>[
   {
-    'urlFoto': 'https://www.auto-data.net/images/f4/lamborghini-aventador-s-coupe_2.jpg',
+    'urlFoto': 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Lamborghini-aventador-svj-63-roadster.jpg/960px-Lamborghini-aventador-svj-63-roadster.jpg',
     'marca': 'Lamborghini',
     'model': 'Aventador',
     'cavalls': 740,
@@ -9,7 +9,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'All wheel drive (4x4)',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f82/Xiaomi-YU7.jpg',
+    'urlFoto': 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/2025_Xiaomi_YU7_%28green%29.jpg/960px-2025_Xiaomi_YU7_%28green%29.jpg',
     'marca': 'Xiaomi',
     'model': 'YU7',
     'cavalls': 320,
@@ -18,8 +18,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Rear wheel drive',
   },
   {
-    'urlFoto':
-        'https://www.auto-data.net/images/f44/McLaren-788HS-Spider_thumb.jpg',
+    'urlFoto': 'https://images.autoexpress.co.uk/autoexpress/2026/07/McLaren%20788HS%202026.jpg?w=1260&h=710&fit=crop&q=75&auto=format%2Ccompress&dpr=1',
     'marca': 'McLaren',
     'model': 'McLaren 788HS Spider',
     'cavalls': 778,
@@ -28,7 +27,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Posterior',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f59/Ferrari-HC25_thumb.jpg',
+    'urlFoto': 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Ferrari_HC25_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original',
     'marca': 'Ferrari',
     'model': 'HC25',
     'cavalls': 720,
@@ -37,7 +36,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Posterior',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f101/BMW-M3-G80-LCI-facelift-2024.jpg',
+    'urlFoto': 'https://hips.hearstapps.com/hmg-prod/images/bmw-m3-cs-2024-1674639702.jpg',
     'marca': 'BMW',
     'model': 'M3 Competition',
     'cavalls': 530,
@@ -46,7 +45,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Xdrive',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f92/Audi-RS-Q3-Sportback.jpg',
+    'urlFoto': 'https://www.rsic6.com/cdn/shop/collections/audi-rsq3-carbon-fiber-collection-by-rsi-c6-12.jpg',
     'marca': 'Audi',
     'model': 'RSQ3 Sportback',
     'cavalls': 400,
@@ -55,7 +54,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Quattro',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f49/Koenigsegg-Gemera_3.jpg',
+    'urlFoto': 'https://images.coches.com/_news_/2023/07/Koenigsegg-Gemera-V8-2.jpeg?w=1280&h=544',
     'marca': 'Koenigsegg',
     'model': 'Gemera',
     'cavalls': 1700,
@@ -64,7 +63,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': '4X4',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f79/Porsche-911-992-facelift-2024_thumb.jpg',
+    'urlFoto': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiLoN3DdI5UhhGQCkTNLfJnz9hIFiOOOtDL5zHy3JUpw&s=10',
     'marca': 'Porsche',
     'model': '911 GT3',
     'cavalls': 541,
@@ -73,7 +72,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': '4X4',
   },
   {
-    'urlFoto': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS5a0YFG-FWGwBbSVNilagVXXEWSmHdnMMbDKgKU2bJp9ToZAiC8adFG0t&s=10',
+    'urlFoto': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTED7mQE9gqiHK7dhy-L87-9clSh4nDK8L5XHgoQFOPjnLzs0IG3h2cRPg&s=10',
     'marca': 'Mini',
     'model': 'Mini Electric',
     'cavalls': 256,
@@ -82,7 +81,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Nose',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f87/Mercedes-Benz-300-SLR-Coupe-W196S.jpg',
+    'urlFoto': 'https://www.amalgamcollection.com/cdn/shop/files/DESKTOP_HERO_IMAGE_-_Mercedes-Benz_300_SLR_Uhlenhaut_Coupe_-_M6263-SC1.jpg?v=1789991668&width=2000',
     'marca': 'Mercedes-Benz',
     'model': 'Mercedes-Benz 300 SLR Coupe',
     'cavalls': 310,
@@ -100,7 +99,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Posterior',
   },
   {
-    'urlFoto': 'https://img.autonomiacocheselectricos.es/images/model/model/tesla-model-3-contexto-entorno-real-contexto-aparcado-exterior-frontal-izquierda-1.webp',
+    'urlFoto': 'https://hips.hearstapps.com/hmg-prod/images/tesla-model-3-performance-unplugged-performance-662f700b34cf5.jpg?crop=0.906xw:0.680xh;0.0356xw,0.119xh&resize=640:*',
     'marca': 'Tesla',
     'model': 'Model 3',
     'cavalls': 510,
@@ -109,7 +108,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Integral',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f54/Hyundai-Coupe-I-RD2-facelift-1999.jpg',
+    'urlFoto': 'https://live.staticflickr.com/8340/8194833937_0f23b97222_b.jpg',
     'marca': 'Peugeot',
     'model': '406 Coupé',
     'cavalls': 207,
@@ -118,7 +117,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Tracció davantera',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f58/Peugeot-406-Coupe-Phase-II-1999.jpg',
+    'urlFoto': 'https://a.ccdn.es/cnet/contents/media/resources/2013/2/1003240.jpg/800x534cut/',
     'marca': 'Hyundai',
     'model': 'Coupé',
     'cavalls': 135,
@@ -127,7 +126,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Tracció davantera',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f10/file639990.jpg',
+    'urlFoto': 'https://www.concesionarios.seat/content/dam/countries/es_dealers/Dealers/AutoEsteller/Noticias/Estrena-un-SEAT-Leon-1-5-TSI-S-S-Style-130-CV-por-solo-311-96-EUR-al-mes/seat-leon-15-tsi-130-cv-blanco-nevado-4351-1599031356_13.jpg',
     'marca': 'Seat',
     'model': 'Leon',
     'cavalls': 180,
@@ -136,7 +135,7 @@ var cotxes = <Map<String, dynamic>>[
     'traccio': 'Tracció davantera',
   },
   {
-    'urlFoto': 'https://www.auto-data.net/images/f41/Hyundai-Kona.jpg',
+    'urlFoto': 'https://cdn.prod.website-files.com/6295cf9d59d138d26fe61c27/64f06fe7b42075bcec140e2e_hyundai-kona-1.jpg',
     'marca': 'Hyundai',
     'model': 'Kona',
     'cavalls': 120,

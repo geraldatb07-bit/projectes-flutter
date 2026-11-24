@@ -8,7 +8,7 @@ class CotxesViewModel extends ChangeNotifier {
   String get modelCotxe => cotxes[indexActual]['model'];
   int get cavallsCotxe => cotxes[indexActual]['cavalls'];
   int get iniciProduccioCotxe => cotxes[indexActual]['iniciProduccio'];
-  int get fiProduccioCotxe => cotxes[indexActual]['fiProduccio'];
+  int? get fiProduccioCotxe => cotxes[indexActual]['fiProduccio'];
   String get traccioCotxe => cotxes[indexActual]['traccio'];
   String get urlImatge => cotxes[indexActual]['urlFoto'];
   
